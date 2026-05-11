@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coppeliasim-api-stubs"
+version = "0.1.0"
+description = "Stubs (.pyi) for de CoppeliaSim's RemoteAPI, ZMQ version."
+authors = [{ name = "Daniel Marquina", email = "damarquinap7@gmail.com" }]
+
+[project.scripts]
+update-coppeliasim-stubs = "coppeliasim_api_stubs.cli_orchestrator:run"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"coppeliasim_api_stubs" = ["*.pyi"]
