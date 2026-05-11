@@ -49,6 +49,8 @@ update-coppeliasim-stubs
 ```
 This command will automatically run the necessary scripts to query the CoppeliaSim API, generate the intermediate JSON files, and build the final `stubs.pyi` file within the package.
 
+**Note on `simROS2`:** The pre-generated stub file included in this package was created on Windows. The `simROS2` plugin is only available on Linux, so its API information is not included. If you are working on Linux and need stubs for `simROS2`, you can regenerate the file using the `update-coppeliasim-stubs` command.
+
 ## 5. Example
 
 For complete, runnable scripts demonstrating how to use the ZMQ Remote API with the benefits of these type stubs, please refer to the files in the `/examples` directory.

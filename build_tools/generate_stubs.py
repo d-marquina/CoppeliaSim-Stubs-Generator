@@ -120,7 +120,14 @@ def generate_stub_file(calltips_path: Path, constants_path: Path, output_pyi: Pa
                         p_name = parts[1].split('=')[0].replace('[]', '') if len(parts) > 1 else f'arg{i}'
                         p_name = re.sub(r'[^a-zA-Z0-9_]', '', p_name) # Clean name
                         
-                        default_val = f" = {parts[1].split('=')[1]}" if '=' in param else ""
+                        default_val = ""
+                        if '=' in param:
+                            val_str = parts[1].split('=', 1)[1]
+                            if '{' in val_str:
+                                default_val = " = ..."  # Use Ellipsis for complex defaults like tables
+                            else:
+                                default_val = f" = {val_str}"
+
                         py_params.append(f"{p_name}: {p_type}{default_val}")
 
                     # Build the return type for Python

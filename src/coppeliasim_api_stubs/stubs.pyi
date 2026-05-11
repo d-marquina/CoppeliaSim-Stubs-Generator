@@ -1564,11 +1564,11 @@ class sim:
         """sim.addForceAndTorque(int shapeHandle, float[3] force=nil, float[3] torque=nil)"""
         ...
 
-    def addGraphCurve(self, graphHandle: int, curveName: str, dim: int, streamIds: Any, defaultValues: Any, unitStr: str, options: int = 0, color: Any = {1, arg8: Any, arg9: Any, curveWidth: int = 2) -> int:
+    def addGraphCurve(self, graphHandle: int, curveName: str, dim: int, streamIds: Any, defaultValues: Any, unitStr: str, options: int = 0, color: Any = ..., arg8: Any, arg9: Any, curveWidth: int = 2) -> int:
         """int curveId = sim.addGraphCurve(int graphHandle, string curveName, int dim, int[2..3] streamIds, float[2..3] defaultValues, string unitStr, int options=0, float[3] color={1, 1, 0}, int curveWidth=2)"""
         ...
 
-    def addGraphStream(self, graphHandle: int, streamName: str, unit: str, options: int = 0, color: Any = {1, arg5: Any, arg6: Any, cyclicRange: float = pi) -> int:
+    def addGraphStream(self, graphHandle: int, streamName: str, unit: str, options: int = 0, color: Any = ..., arg5: Any, arg6: Any, cyclicRange: float = pi) -> int:
         """int streamId = sim.addGraphStream(int graphHandle, string streamName, string unit, int options=0, float[3] color={1, 0, 0}, float cyclicRange=pi)"""
         ...
 
@@ -1756,7 +1756,7 @@ class sim:
         """int handle = sim.createOctree(float voxelSize, int options, float pointSize)"""
         ...
 
-    def createPath(self, ctrlPts: list, options: int = 0, subdiv: int = 100, smoothness: float = 1.0, orientationMode: int = 0, upVector: Any = {0, arg6: Any, arg7: Any) -> int:
+    def createPath(self, ctrlPts: list, options: int = 0, subdiv: int = 100, smoothness: float = 1.0, orientationMode: int = 0, upVector: Any = ..., arg6: Any, arg7: Any) -> int:
         """int pathHandle = sim.createPath(float[] ctrlPts, int options=0, int subdiv=100, float smoothness=1.0, int orientationMode=0, float[3] upVector={0, 0, 1})"""
         ...
 
@@ -1824,11 +1824,11 @@ class sim:
         """int result = sim.floatingViewRemove(int floatingViewHandle)"""
         ...
 
-    def generateShapeFromPath(self, path: list, section: list, options: int = 0, upVector: Any = {0.0, arg4: Any, arg5: Any) -> int:
+    def generateShapeFromPath(self, path: list, section: list, options: int = 0, upVector: Any = ..., arg4: Any, arg5: Any) -> int:
         """int shapeHandle = sim.generateShapeFromPath(float[] path, float[] section, int options=0, float[3] upVector={0.0, 0.0, 1.0})"""
         ...
 
-    def generateTextShape(self, txt: str, color: Any = {1, arg2: Any, arg3: Any, height: float = 0.1, centered: bool = false, alphabetLocation: str = nil) -> int:
+    def generateTextShape(self, txt: str, color: Any = ..., arg2: Any, arg3: Any, height: float = 0.1, centered: bool = false, alphabetLocation: str = nil) -> int:
         """int modelHandle = sim.generateTextShape(string txt, float[3] color={1, 1, 1}, float height=0.1, bool centered=false, string alphabetLocation=nil)"""
         ...
 
@@ -1860,11 +1860,11 @@ class sim:
         """bool boolState = sim.getBoolParam(int parameter)"""
         ...
 
-    def getBoolProperty(self, target: int, pName: str, options: dict = {}) -> bool:
+    def getBoolProperty(self, target: int, pName: str, options: dict = ...) -> bool:
         """bool pValue = sim.getBoolProperty(int target, string pName, map options={})"""
         ...
 
-    def getBufferProperty(self, target: int, pName: str, options: dict = {}) -> bytes:
+    def getBufferProperty(self, target: int, pName: str, options: dict = ...) -> bytes:
         """buffer pValue = sim.getBufferProperty(int target, string pName, map options={})"""
         ...
 
@@ -1880,7 +1880,7 @@ class sim:
         """int[] objectHandles = sim.getCollectionObjects(int collectionHandle)"""
         ...
 
-    def getColorProperty(self, target: int, pName: str, options: dict = {}) -> Any:
+    def getColorProperty(self, target: int, pName: str, options: dict = ...) -> Any:
         """float[3] pValue = sim.getColorProperty(int target, string pName, map options={})"""
         ...
 
@@ -1916,7 +1916,7 @@ class sim:
         """string theString = sim.getExtensionString(int objectHandle, int index, string key=nil)"""
         ...
 
-    def getFloatArrayProperty(self, target: int, pName: str, options: dict = {}) -> list:
+    def getFloatArrayProperty(self, target: int, pName: str, options: dict = ...) -> list:
         """float[] pValue = sim.getFloatArrayProperty(int target, string pName, map options={})"""
         ...
 
@@ -1924,7 +1924,7 @@ class sim:
         """float floatState = sim.getFloatParam(int parameter)"""
         ...
 
-    def getFloatProperty(self, target: int, pName: str, options: dict = {}) -> float:
+    def getFloatProperty(self, target: int, pName: str, options: dict = ...) -> float:
         """float pValue = sim.getFloatProperty(int target, string pName, map options={})"""
         ...
 
@@ -1952,15 +1952,15 @@ class sim:
         """int signalValue = sim.getInt32Signal(string signalName)"""
         ...
 
-    def getIntArray2Property(self, target: int, pName: str, options: dict = {}) -> Any:
+    def getIntArray2Property(self, target: int, pName: str, options: dict = ...) -> Any:
         """int[2] pValue = sim.getIntArray2Property(int target, string pName, map options={})"""
         ...
 
-    def getIntArrayProperty(self, target: int, pName: str, options: dict = {}) -> list:
+    def getIntArrayProperty(self, target: int, pName: str, options: dict = ...) -> list:
         """int[] pValue = sim.getIntArrayProperty(int target, string pName, map options={})"""
         ...
 
-    def getIntProperty(self, target: int, pName: str, options: dict = {}) -> int:
+    def getIntProperty(self, target: int, pName: str, options: dict = ...) -> int:
         """int pValue = sim.getIntProperty(int target, string pName, map options={})"""
         ...
 
@@ -2024,7 +2024,7 @@ class sim:
         """string[] names = sim.getLoadedPlugins()"""
         ...
 
-    def getLongProperty(self, target: int, pName: str, options: dict = {}) -> int:
+    def getLongProperty(self, target: int, pName: str, options: dict = ...) -> int:
         """int pValue = sim.getLongProperty(int target, string pName, map options={})"""
         ...
 
@@ -2064,7 +2064,7 @@ class sim:
         """int navigationMode = sim.getNavigationMode()"""
         ...
 
-    def getObject(self, path: str, options: dict = {}) -> int:
+    def getObject(self, path: str, options: dict = ...) -> int:
         """int objectHandle = sim.getObject(string path, map options={})"""
         ...
 
@@ -2100,7 +2100,7 @@ class sim:
         """sim.getObjectFromUid(int uid, map options={})"""
         ...
 
-    def getObjectHandle(self, path: str, options: dict = {}) -> int:
+    def getObjectHandle(self, path: str, options: dict = ...) -> int:
         """int handle = sim.getObjectHandle(string path, map options={})"""
         ...
 
@@ -2215,27 +2215,27 @@ class sim:
         """float[7] pose = sim.getPoseInverse(float[7] pose)"""
         ...
 
-    def getPoseProperty(self, target: int, pName: str, options: dict = {}) -> Any:
+    def getPoseProperty(self, target: int, pName: str, options: dict = ...) -> Any:
         """float[7] pValue = sim.getPoseProperty(int target, string pName, map options={})"""
         ...
 
-    def getProperties(self, target: int, opts: dict = {}) -> dict:
+    def getProperties(self, target: int, opts: dict = ...) -> dict:
         """map values = sim.getProperties(int target, map opts={})"""
         ...
 
-    def getPropertiesInfos(self, target: int, opts: dict = {}) -> dict:
+    def getPropertiesInfos(self, target: int, opts: dict = ...) -> dict:
         """map infos = sim.getPropertiesInfos(int target, map opts={})"""
         ...
 
-    def getProperty(self, target: int, pName: str, options: dict = {}) -> Any:
+    def getProperty(self, target: int, pName: str, options: dict = ...) -> Any:
         """any pValue = sim.getProperty(int target, string pName, map options={})"""
         ...
 
-    def getPropertyInfo(self, target: int, pName: str, options: dict = {}) -> Tuple[int, int, str]:
+    def getPropertyInfo(self, target: int, pName: str, options: dict = ...) -> Tuple[int, int, str]:
         """int pType, int pFlags, string description = sim.getPropertyInfo(int target, string pName, map options={})"""
         ...
 
-    def getPropertyName(self, target: int, index: int, options: dict = {}) -> Tuple[str, str]:
+    def getPropertyName(self, target: int, index: int, options: dict = ...) -> Tuple[str, str]:
         """string pName, string appartenance = sim.getPropertyName(int target, int index, map options={})"""
         ...
 
@@ -2247,7 +2247,7 @@ class sim:
         """float[4] quat = sim.getQuaternionInverse(float[4] quat)"""
         ...
 
-    def getQuaternionProperty(self, target: int, pName: str, options: dict = {}) -> Any:
+    def getQuaternionProperty(self, target: int, pName: str, options: dict = ...) -> Any:
         """float[4] pValue = sim.getQuaternionProperty(int target, string pName, map options={})"""
         ...
 
@@ -2303,7 +2303,7 @@ class sim:
         """string value = sim.getSettingString(string key)"""
         ...
 
-    def getShapeAppearance(self, handle: int, opts: dict = {}) -> dict:
+    def getShapeAppearance(self, handle: int, opts: dict = ...) -> dict:
         """map savedData = sim.getShapeAppearance(int handle, map opts={})"""
         ...
 
@@ -2371,7 +2371,7 @@ class sim:
         """string stringState = sim.getStringParam(int parameter)"""
         ...
 
-    def getStringProperty(self, target: int, pName: str, options: dict = {}) -> str:
+    def getStringProperty(self, target: int, pName: str, options: dict = ...) -> str:
         """string pValue = sim.getStringProperty(int target, string pName, map options={})"""
         ...
 
@@ -2383,7 +2383,7 @@ class sim:
         """float time = sim.getSystemTime()"""
         ...
 
-    def getTableProperty(self, target: int, pName: str, options: dict = {}) -> dict:
+    def getTableProperty(self, target: int, pName: str, options: dict = ...) -> dict:
         """map pValue = sim.getTableProperty(int target, string pName, map options={})"""
         ...
 
@@ -2399,11 +2399,11 @@ class sim:
         """string[] variables = sim.getUserVariables()"""
         ...
 
-    def getVector2Property(self, target: int, pName: str, options: dict = {}) -> Any:
+    def getVector2Property(self, target: int, pName: str, options: dict = ...) -> Any:
         """float[2] pValue = sim.getVector2Property(int target, string pName, map options={})"""
         ...
 
-    def getVector3Property(self, target: int, pName: str, options: dict = {}) -> Any:
+    def getVector3Property(self, target: int, pName: str, options: dict = ...) -> Any:
         """float[3] pValue = sim.getVector3Property(int target, string pName, map options={})"""
         ...
 
@@ -2411,11 +2411,11 @@ class sim:
         """float[3] linearVelocity, float[3] angularVelocity = sim.getVelocity(int shapeHandle)"""
         ...
 
-    def getVisionSensorDepth(self, sensorHandle: int, options: int = 0, pos: Any = {0, arg3: Any, size: Any = {0, arg5: Any) -> Tuple[bytes, Any]:
+    def getVisionSensorDepth(self, sensorHandle: int, options: int = 0, pos: Any = ..., arg3: Any, size: Any = ..., arg5: Any) -> Tuple[bytes, Any]:
         """buffer depth, int[2] resolution = sim.getVisionSensorDepth(int sensorHandle, int options=0, int[2] pos={0, 0}, int[2] size={0, 0})"""
         ...
 
-    def getVisionSensorImg(self, sensorHandle: int, options: int = 0, rgbaCutOff: float = 0.0, pos: Any = {0, arg4: Any, size: Any = {0, arg6: Any) -> Tuple[bytes, Any]:
+    def getVisionSensorImg(self, sensorHandle: int, options: int = 0, rgbaCutOff: float = 0.0, pos: Any = ..., arg4: Any, size: Any = ..., arg6: Any) -> Tuple[bytes, Any]:
         """buffer image, int[2] resolution = sim.getVisionSensorImg(int sensorHandle, int options=0, float rgbaCutOff=0.0, int[2] pos={0, 0}, int[2] size={0, 0})"""
         ...
 
@@ -2651,7 +2651,7 @@ class sim:
         """buffer data = sim.readCustomBufferData(int objectHandle, string tagName)"""
         ...
 
-    def readCustomDataBlockEx(self, handle: int, tag: str, options: dict = {}) -> Tuple[bytes, str]:
+    def readCustomDataBlockEx(self, handle: int, tag: str, options: dict = ...) -> Tuple[bytes, str]:
         """buffer data, string dataType = sim.readCustomDataBlockEx(int handle, string tag, map options={})"""
         ...
 
@@ -2663,7 +2663,7 @@ class sim:
         """string data = sim.readCustomStringData(int objectHandle, string tagName)"""
         ...
 
-    def readCustomTableData(self, handle: int, tagName: str, options: dict = {}) -> dict:
+    def readCustomTableData(self, handle: int, tagName: str, options: dict = ...) -> dict:
         """map data = sim.readCustomTableData(int handle, string tagName, map options={})"""
         ...
 
@@ -3074,7 +3074,7 @@ class sim:
         """sim.setReferencedHandles(int objectHandle, int[] referencedHandles, string tag='')"""
         ...
 
-    def setShapeAppearance(self, handle: int, savedData: dict, opts: dict = {}) -> int:
+    def setShapeAppearance(self, handle: int, savedData: dict, opts: dict = ...) -> int:
         """int handle = sim.setShapeAppearance(int handle, map savedData, map opts={})"""
         ...
 
@@ -3880,7 +3880,7 @@ class simEigen:
         """map m = simEigen.Pose:totransform()"""
         ...
 
-    def Quaternion(self, data: list = {}) -> dict:
+    def Quaternion(self, data: list = ...) -> dict:
         """map q = simEigen.Quaternion(float[] data={})"""
         ...
 
@@ -4016,7 +4016,7 @@ class simEigen:
         """string handle = simEigen.mtxMul(string handle, string handle2)"""
         ...
 
-    def mtxNew(self, rows: int, cols: int, initialData: list = {}) -> str:
+    def mtxNew(self, rows: int, cols: int, initialData: list = ...) -> str:
         """string handle = simEigen.mtxNew(int rows, int cols, float[] initialData={})"""
         ...
 
@@ -4132,7 +4132,7 @@ class simEigen:
         """string handle = simEigen.quatMulVec(string handle, string vectorHandle)"""
         ...
 
-    def quatNew(self, initialData: Any = {0, arg1: Any, arg2: Any, arg3: Any) -> str:
+    def quatNew(self, initialData: Any = ..., arg1: Any, arg2: Any, arg3: Any) -> str:
         """string handle = simEigen.quatNew(float[4] initialData={0,0,0,1})"""
         ...
 
@@ -4281,15 +4281,15 @@ class simGeom:
         """int octreeHandle = simGeom.createOctreeFromColorPoints(float[] points, float[3] octreeOriginPos=nil, float[4] octreeOriginQuaternion=nil, float maxCellSize=0.05, float[] colors=nil, int[] userData=nil)"""
         ...
 
-    def createOctreeFromMesh(self, meshHandle: int, meshPos: Any, meshQuaternion: Any, octreeOriginPos: Any = nil, octreeOriginQuaternion: Any = nil, maxCellSize: float = 0.05, pointColor: Any = {0, arg7: Any, arg8: Any, userData: int = 0) -> int:
+    def createOctreeFromMesh(self, meshHandle: int, meshPos: Any, meshQuaternion: Any, octreeOriginPos: Any = nil, octreeOriginQuaternion: Any = nil, maxCellSize: float = 0.05, pointColor: Any = ..., arg7: Any, arg8: Any, userData: int = 0) -> int:
         """int octreeHandle = simGeom.createOctreeFromMesh(int meshHandle, float[3] meshPos, float[4] meshQuaternion, float[3] octreeOriginPos=nil, float[4] octreeOriginQuaternion=nil, float maxCellSize=0.05, int[3] pointColor={0, 0, 0}, int userData=0)"""
         ...
 
-    def createOctreeFromOctree(self, octreeHandle: int, octreePos: Any, octreeQuaternion: Any, newOctreeOriginPos: Any = nil, newOctreeOriginQuaternion: Any = nil, maxCellSize: float = 0.05, pointColor: Any = {0, arg7: Any, arg8: Any, userData: int = 0) -> int:
+    def createOctreeFromOctree(self, octreeHandle: int, octreePos: Any, octreeQuaternion: Any, newOctreeOriginPos: Any = nil, newOctreeOriginQuaternion: Any = nil, maxCellSize: float = 0.05, pointColor: Any = ..., arg7: Any, arg8: Any, userData: int = 0) -> int:
         """int octreeHandle = simGeom.createOctreeFromOctree(int octreeHandle, float[3] octreePos, float[4] octreeQuaternion, float[3] newOctreeOriginPos=nil, float[4] newOctreeOriginQuaternion=nil, float maxCellSize=0.05, int[3] pointColor={0, 0, 0}, int userData=0)"""
         ...
 
-    def createOctreeFromPoints(self, points: list, octreeOriginPos: Any = nil, octreeOriginQuaternion: Any = nil, maxCellSize: float = 0.05, pointColor: Any = {0, arg5: Any, arg6: Any, userData: int = 0) -> int:
+    def createOctreeFromPoints(self, points: list, octreeOriginPos: Any = nil, octreeOriginQuaternion: Any = nil, maxCellSize: float = 0.05, pointColor: Any = ..., arg5: Any, arg6: Any, userData: int = 0) -> int:
         """int octreeHandle = simGeom.createOctreeFromPoints(float[] points, float[3] octreeOriginPos=nil, float[4] octreeOriginQuaternion=nil, float maxCellSize=0.05, int[3] pointColor={0, 0, 0}, int userData=0)"""
         ...
 
@@ -4301,7 +4301,7 @@ class simGeom:
         """int ptcloudHandle = simGeom.createPtcloudFromColorPoints(float[] points, float[3] octreeOriginPos=nil, float[4] octreeOriginQuaternion=nil, float maxCellSize=0.05, int maxPtsInCell=20, float[] colors=nil, float proximityTolerance=0.005)"""
         ...
 
-    def createPtcloudFromPoints(self, points: list, octreeOriginPos: Any = nil, octreeOriginQuaternion: Any = nil, maxCellSize: float = 0.05, maxPtsInCell: int = 20, pointColor: Any = {0, arg6: Any, arg7: Any, proximityTolerance: float = 0.005) -> int:
+    def createPtcloudFromPoints(self, points: list, octreeOriginPos: Any = nil, octreeOriginQuaternion: Any = nil, maxCellSize: float = 0.05, maxPtsInCell: int = 20, pointColor: Any = ..., arg6: Any, arg7: Any, proximityTolerance: float = 0.005) -> int:
         """int ptcloudHandle = simGeom.createPtcloudFromPoints(float[] points, float[3] octreeOriginPos=nil, float[4] octreeOriginQuaternion=nil, float maxCellSize=0.05, int maxPtsInCell=20, int[3] pointColor={0, 0, 0}, float proximityTolerance=0.005)"""
         ...
 
@@ -4527,7 +4527,7 @@ class simIGL:
         """float[3] c, float vol = simIGL.centroid(map m)"""
         ...
 
-    def closestFacet(self, m: dict, points: Any, emap: Any, uec: Any, uee: Any, indices: list = {}) -> Tuple[list, list]:
+    def closestFacet(self, m: dict, points: Any, emap: Any, uec: Any, uee: Any, indices: list = ...) -> Tuple[list, list]:
         """int[] r, int[] s = simIGL.closestFacet(map m, grid points, grid emap, grid uec, grid uee, int[] indices={})"""
         ...
 
@@ -4551,7 +4551,7 @@ class simIGL:
         """grid c = simIGL.faceCentroids(map m)"""
         ...
 
-    def getMesh(self, h: int, options: dict = {}) -> dict:
+    def getMesh(self, h: int, options: dict = ...) -> dict:
         """map mesh = simIGL.getMesh(int h, map options={})"""
         ...
 
@@ -4709,7 +4709,7 @@ class simIK:
         """simIK.eraseObject(int environmentHandle, int objectHandle)"""
         ...
 
-    def findConfigs(self, envHandle: int, ikGroupHandle: int, jointHandles: list, params: dict = {}, configs: list = {}) -> list:
+    def findConfigs(self, envHandle: int, ikGroupHandle: int, jointHandles: list, params: dict = ..., configs: list = ...) -> list:
         """any[] configs = simIK.findConfigs(int envHandle, int ikGroupHandle, int[] jointHandles, map params={}, any[] configs={})"""
         ...
 
@@ -4841,11 +4841,11 @@ class simIK:
         """int targetDummyHandle = simIK.getTargetDummy(int environmentHandle, int dummyHandle)"""
         ...
 
-    def handleGroup(self, environmentHandle: int, ikGroup: int, options: dict = {}) -> Tuple[int, int, Any]:
+    def handleGroup(self, environmentHandle: int, ikGroup: int, options: dict = ...) -> Tuple[int, int, Any]:
         """int success, int flags, float[2] precision = simIK.handleGroup(int environmentHandle, int ikGroup, map options={})"""
         ...
 
-    def handleGroups(self, environmentHandle: int, ikGroups: list, options: dict = {}) -> Tuple[int, int, Any]:
+    def handleGroups(self, environmentHandle: int, ikGroups: list, options: dict = ...) -> Tuple[int, int, Any]:
         """int success, int flags, float[2] precision = simIK.handleGroups(int environmentHandle, int[] ikGroups, map options={})"""
         ...
 
@@ -6318,11 +6318,11 @@ class simSubprocess:
     """API functions for the `simSubprocess` module."""
 
     # --- Functions ---
-    def exec(self, programPath: str, args: list, input: bytes = "", opts: dict = {}) -> Tuple[int, bytes]:
+    def exec(self, programPath: str, args: list, input: bytes = "", opts: dict = ...) -> Tuple[int, bytes]:
         """int exitCode, buffer output = simSubprocess.exec(string programPath, string[] args, buffer input="", map opts={})"""
         ...
 
-    def execAsync(self, programPath: str, args: list, opts: dict = {}) -> str:
+    def execAsync(self, programPath: str, args: list, opts: dict = ...) -> str:
         """string handle = simSubprocess.execAsync(string programPath, string[] args, map opts={})"""
         ...
 
@@ -6480,7 +6480,7 @@ class simUI:
         """simUI.collapseAll(string handle, int id, bool suppressEvents=true)"""
         ...
 
-    def colorDialog(self, initColor: Any = {1, arg1: Any, arg2: Any, title: str = "Select, showAlphaChannel: bool = false, native: bool = true) -> Any:
+    def colorDialog(self, initColor: Any = ..., arg1: Any, arg2: Any, title: str = "Select, showAlphaChannel: bool = false, native: bool = true) -> Any:
         """float[3] result = simUI.colorDialog(float[3..4] initColor={1,1,1}, string title="Select color", bool showAlphaChannel=false, bool native=true)"""
         ...
 
@@ -6980,11 +6980,11 @@ class simVision:
         """simVision.addWorkImgToBuffer1(int visionSensorHandle)"""
         ...
 
-    def binaryWorkImg(self, visionSensorHandle: int, threshold: float, oneProportion: float, oneTol: float, xCenter: float, xCenterTol: float, yCenter: float, yCenterTol: float, orient: float, orientTol: float, roundness: float, enableTrigger: bool, overlayColor: Any = {1.0, arg13: Any, arg14: Any) -> Tuple[bool, bytes]:
+    def binaryWorkImg(self, visionSensorHandle: int, threshold: float, oneProportion: float, oneTol: float, xCenter: float, xCenterTol: float, yCenter: float, yCenterTol: float, orient: float, orientTol: float, roundness: float, enableTrigger: bool, overlayColor: Any = ..., arg13: Any, arg14: Any) -> Tuple[bool, bytes]:
         """bool trigger, buffer packedDataPacket = simVision.binaryWorkImg(int visionSensorHandle, float threshold, float oneProportion, float oneTol, float xCenter, float xCenterTol, float yCenter, float yCenterTol, float orient, float orientTol, float roundness, bool enableTrigger, float[3] overlayColor={1.0, 0.0, 1.0})"""
         ...
 
-    def blobDetectionOnWorkImg(self, visionSensorHandle: int, threshold: float, minBlobSize: float, modifyWorkImage: bool, overlayColor: Any = {1.0, arg5: Any, arg6: Any) -> Tuple[bool, bytes]:
+    def blobDetectionOnWorkImg(self, visionSensorHandle: int, threshold: float, minBlobSize: float, modifyWorkImage: bool, overlayColor: Any = ..., arg5: Any, arg6: Any) -> Tuple[bool, bytes]:
         """bool trigger, buffer packedDataPacket = simVision.blobDetectionOnWorkImg(int visionSensorHandle, float threshold, float minBlobSize, bool modifyWorkImage, float[3] overlayColor={1.0, 0.0, 1.0})"""
         ...
 
@@ -7012,11 +7012,11 @@ class simVision:
         """bool trigger, buffer packedDataPacket, buffer colorData = simVision.coordinatesFromWorkImg(int visionSensorHandle, int[2] xyPointCount, bool evenlySpacedInAngularSpace, bool returnColorData=false)"""
         ...
 
-    def createVelodyneHDL64E(self, visionSensorHandles: Any, frequency: float, options: int = 0, pointSize: int = 2, coloring_closeFarDist: Any = {1, arg5: Any, displayScalingFactor: float = 1) -> int:
+    def createVelodyneHDL64E(self, visionSensorHandles: Any, frequency: float, options: int = 0, pointSize: int = 2, coloring_closeFarDist: Any = ..., arg5: Any, displayScalingFactor: float = 1) -> int:
         """int velodyneHandle = simVision.createVelodyneHDL64E(int[4] visionSensorHandles, float frequency, int options=0, int pointSize=2, float[2] coloring_closeFarDist={1, 5}, float displayScalingFactor=1)"""
         ...
 
-    def createVelodyneVPL16(self, visionSensorHandles: Any, frequency: float, options: int = 0, pointSize: int = 2, coloring_closeFarDist: Any = {1, arg5: Any, displayScalingFactor: float = 1) -> int:
+    def createVelodyneVPL16(self, visionSensorHandles: Any, frequency: float, options: int = 0, pointSize: int = 2, coloring_closeFarDist: Any = ..., arg5: Any, displayScalingFactor: float = 1) -> int:
         """int velodyneHandle = simVision.createVelodyneVPL16(int[4] visionSensorHandles, float frequency, int options=0, int pointSize=2, float[2] coloring_closeFarDist={1, 5}, float displayScalingFactor=1)"""
         ...
 

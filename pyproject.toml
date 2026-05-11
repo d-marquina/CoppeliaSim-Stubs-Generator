@@ -15,4 +15,4 @@ update-coppeliasim-stubs = "coppeliasim_api_stubs.cli_orchestrator:run"
 where = ["src"]
 
 [tool.setuptools.package-data]
-"coppeliasim_api_stubs" = ["*.pyi"]
+"coppeliasim_api_stubs" = ["*.pyi", "py.typed"]
