@@ -5,7 +5,7 @@
 This package provides type definitions for the CoppeliaSim ZMQ Remote API, with current support for **Python** (`.pyi` stubs) and **TypeScript** (`.d.ts` definitions). Its main purpose is to enable robust autocompletion and static type analysis in modern IDEs (like PyCharm, VS Code, etc.), improving developer experience and code quality.
 
 The package achieves this in two ways:
-1.  It includes pre-generated stub files that work out-of-the-box with a recent version of CoppeliaSim.
+1.  It includes pre-generated stub files that work out-of-the-box with a recent version of CoppeliaSim. The Python stubs are installed with the package, while other language definitions are available in the source repository.
 2.  It provides a command-line tool to allow users to easily regenerate these definitions based on their specific, running version of CoppeliaSim.
 
 This package bundles and uses three utility scripts from the official CoppeliaSim installation (`get_raw_calltips.py`, `get_constants.py`, and `get_constants.lua`), which can be originally found in `CoppeliaSimFolder/programming/zmqRemoteApi/tools`. These scripts are used by the `update-coppeliasim-stubs` command to query the simulator's API.
@@ -64,11 +64,13 @@ You can also generate stubs for a specific language using flags:
 
 The generated files will be placed in the appropriate directories within the project (`src/` for the functional Python stubs and `stubs/` for reference copies).
 
+**Note for Package Users:** The `stubs` directory, which contains reference copies of the generated files, is part of the development repository and is not included in the standard package installation.
+
 **Note on `simROS2`:** The pre-generated stub file included in this package was created on Windows. The `simROS2` plugin is only available on Linux, so its API information is not included. If you are working on Linux and need stubs for `simROS2`, you can regenerate the file using the `update-coppeliasim-stubs` command.
 
 ## 5. Example
 
-For complete, runnable scripts demonstrating how to use the ZMQ Remote API with the benefits of these type stubs, please refer to the files in the `/examples` directory.
+For complete, runnable scripts demonstrating how to use the ZMQ Remote API with the benefits of these type stubs, please refer to the files in the `/examples` directory of the source repository. This directory is intended for development and is not included in the installed package.
 
 A typical client script using these stubs would look like this:
 ```python
