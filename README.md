@@ -1,12 +1,12 @@
-# CoppeliaSim API Stubs
+# CoppeliaSim API Stubs Generator
 
 ## 1. Description
 
-This package provides Python type stubs (`.pyi` files) for the CoppeliaSim ZMQ Remote API. Its main purpose is to enable robust autocompletion and static type analysis in modern IDEs (like PyCharm, VS Code, etc.), improving developer experience and code quality.
+This package provides type definitions for the CoppeliaSim ZMQ Remote API, with current support for **Python** (`.pyi` stubs) and **TypeScript** (`.d.ts` definitions). Its main purpose is to enable robust autocompletion and static type analysis in modern IDEs (like PyCharm, VS Code, etc.), improving developer experience and code quality.
 
 The package achieves this in two ways:
-1.  It includes a pre-generated `stubs.pyi` file that works out-of-the-box with a recent version of CoppeliaSim (4.10.0).
-2.  It provides a command-line tool to allow users to easily regenerate these stubs based on their specific, running version of CoppeliaSim.
+1.  It includes pre-generated stub files that work out-of-the-box with a recent version of CoppeliaSim.
+2.  It provides a command-line tool to allow users to easily regenerate these definitions based on their specific, running version of CoppeliaSim.
 
 This package bundles and uses three utility scripts from the official CoppeliaSim installation (`get_raw_calltips.py`, `get_constants.py`, and `get_constants.lua`), which can be originally found in `CoppeliaSimFolder/programming/zmqRemoteApi/tools`. These scripts are used by the `update-coppeliasim-stubs` command to query the simulator's API.
 
@@ -47,7 +47,22 @@ First, ensure the CoppeliaSim application is running. Then, execute the followin
 ```bash
 update-coppeliasim-stubs
 ```
-This command will automatically run the necessary scripts to query the CoppeliaSim API, generate the intermediate JSON files, and build the final `stubs.pyi` file within the package.
+This command will automatically run the necessary scripts to query the CoppeliaSim API and generate definitions for all supported languages.
+
+#### Generating for a Specific Language
+You can also generate stubs for a specific language using flags:
+
+*   **For Python only:**
+    ```bash
+    update-coppeliasim-stubs --python
+    ```
+
+*   **For TypeScript only:**
+    ```bash
+    update-coppeliasim-stubs --typescript
+    ```
+
+The generated files will be placed in the appropriate directories within the project (`src/` for the functional Python stubs and `stubs/` for reference copies).
 
 **Note on `simROS2`:** The pre-generated stub file included in this package was created on Windows. The `simROS2` plugin is only available on Linux, so its API information is not included. If you are working on Linux and need stubs for `simROS2`, you can regenerate the file using the `update-coppeliasim-stubs` command.
 
