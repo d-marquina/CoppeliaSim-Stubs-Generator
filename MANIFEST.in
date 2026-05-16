@@ -1,9 +1,6 @@
-# Include the entire stubs directory
-graft stubs
-
-# Include the tools and vendor scripts inside the package
+# Include the tools and vendor scripts that are part of the package
 graft src/coppeliasim_api_stubs/build_tools
 graft src/coppeliasim_api_stubs/vendor
 
-# Include the py.typed marker
+# Include the py.typed marker file
 include src/coppeliasim_api_stubs/py.typed

@@ -1,19 +1,20 @@
 import argparse
 import subprocess
 import sys
+import shutil
 from pathlib import Path
 
 def run():
     """
     Orchestrates the execution of scripts to generate the CoppeliaSim API stubs.
-    Accepts flags to generate stubs for specific languages.
+    Generates stubs directly into the src directory for correct packaging,
+    and copies them to the /stubs directory for reference.
     """
     parser = argparse.ArgumentParser(description='Generate API stubs for CoppeliaSim.')
     parser.add_argument('--python', action='store_true', help='Generate Python stubs.')
     parser.add_argument('--typescript', action='store_true', help='Generate TypeScript definitions.')
     args = parser.parse_args()
 
-    # If no specific language is requested, generate for all
     generate_all = not args.python and not args.typescript
     generate_python = args.python or generate_all
     generate_typescript = args.typescript or generate_all
@@ -29,13 +30,12 @@ def run():
         generated_data_dir = project_root / "generated_data"
         
         generated_data_dir.mkdir(exist_ok=True)
-        (stubs_dir / "python" / "coppeliasim_api_stubs").mkdir(exist_ok=True, parents=True)
+        (stubs_dir / "python").mkdir(exist_ok=True, parents=True)
         (stubs_dir / "typescript").mkdir(exist_ok=True, parents=True)
 
         calltips_json = generated_data_dir / "calltips.json"
         constants_json = generated_data_dir / "constants.json"
         
-        # These steps are common and always need to run if any generation is happening
         if generate_python or generate_typescript:
             print("Executing get_raw_calltips.py...")
             subprocess.run(
@@ -51,12 +51,18 @@ def run():
 
         if generate_python:
             print("Executing generate_stubs.py for Python...")
-            stubs_pyi = stubs_dir / "python" / "coppeliasim_api_stubs" / "stubs.pyi"
+            # Primary target for Python stubs is inside the package source
+            primary_stubs_pyi = package_root / "stubs.pyi"
             subprocess.run(
-                [sys.executable, str(build_tools_dir / "generate_stubs.py"), str(calltips_json), str(constants_json), str(stubs_pyi)],
+                [sys.executable, str(build_tools_dir / "generate_stubs.py"), str(calltips_json), str(constants_json), str(primary_stubs_pyi)],
                 check=True, text=True
             )
-            print(f"Python stubs generated successfully at: {stubs_pyi}")
+            print(f"Python stubs generated successfully at: {primary_stubs_pyi}")
+
+            # Copy the generated file to the stubs/python directory for reference
+            reference_stubs_pyi = stubs_dir / "python" / "stubs.pyi"
+            print(f"Copying to reference location: {reference_stubs_pyi}")
+            shutil.copy(primary_stubs_pyi, reference_stubs_pyi)
 
         if generate_typescript:
             print("Executing generate_typescript.py for TypeScript...")
