@@ -4,15 +4,27 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "coppeliasim-api-stubs"
-version = "0.1.0"
-description = "Stubs (.pyi) for de CoppeliaSim's RemoteAPI, ZMQ version."
+version = "0.2.0"
+description = "Stubs (.pyi, .d.ts) and generator tools for the CoppeliaSim ZMQ Remote API."
 authors = [{ name = "Daniel Marquina", email = "damarquinap7@gmail.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Scientific/Engineering",
+]
+keywords = ["coppeliasim", "robotics", "simulation", "stubs", "typing"]
 
 [project.scripts]
 update-coppeliasim-stubs = "coppeliasim_api_stubs.cli_orchestrator:run"
 
+[tool.setuptools]
+include-package-data = true
+
 [tool.setuptools.packages.find]
 where = ["src"]
-
-[tool.setuptools.package-data]
-"coppeliasim_api_stubs" = ["*.pyi", "py.typed"]

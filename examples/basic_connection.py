@@ -45,4 +45,4 @@ except Exception as e:
 
 finally:
     print("Closing connection.")
-    # client.close() # Proper client cleanup might be needed depending on the library version.
+    client.close()
