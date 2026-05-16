@@ -4023,467 +4023,467 @@ declare namespace CoppeliaSim {
         /**
          * map m = simEigen.Matrix:abs()
          */
-        Matrix:abs(): object;
+        "Matrix:abs"(): object;
 
         /**
          * map m = simEigen.Matrix:acos()
          */
-        Matrix:acos(): object;
+        "Matrix:acos"(): object;
 
         /**
          * map m = simEigen.Matrix:add(map m2)
          */
-        Matrix:add(m2: object): object;
+        "Matrix:add"(m2: object): object;
 
         /**
          * map m = simEigen.Matrix:asin()
          */
-        Matrix:asin(): object;
+        "Matrix:asin"(): object;
 
         /**
          * map m = simEigen.Matrix:atan()
          */
-        Matrix:atan(): object;
+        "Matrix:atan"(): object;
 
         /**
          * map m = simEigen.Matrix:block(int i, int j, int p, int q)
          */
-        Matrix:block(i: number, j: number, p: number, q: number): object;
+        "Matrix:block"(i: number, j: number, p: number, q: number): object;
 
         /**
          * map self = simEigen.Matrix:blockassign(map m, int i, int j, int p, int q)
          */
-        Matrix:blockassign(m: object, i: number, j: number, p: number, q: number): object;
+        "Matrix:blockassign"(m: object, i: number, j: number, p: number, q: number): object;
 
         /**
          * map m = simEigen.Matrix:ceil()
          */
-        Matrix:ceil(): object;
+        "Matrix:ceil"(): object;
 
         /**
          * map m = simEigen.Matrix:col(int j)
          */
-        Matrix:col(j: number): object;
+        "Matrix:col"(j: number): object;
 
         /**
          * float[] a = simEigen.Matrix:coldata(int j)
          */
-        Matrix:coldata(j: number): number[];
+        "Matrix:coldata"(j: number): number[];
 
         /**
          * int number = simEigen.Matrix:cols()
          */
-        Matrix:cols(): number;
+        "Matrix:cols"(): number;
 
         /**
          * map m = simEigen.Matrix:copy()
          */
-        Matrix:copy(): object;
+        "Matrix:copy"(): object;
 
         /**
          * map m = simEigen.Matrix:cos()
          */
-        Matrix:cos(): object;
+        "Matrix:cos"(): object;
 
         /**
          * int number = simEigen.Matrix:count()
          */
-        Matrix:count(): number;
+        "Matrix:count"(): number;
 
         /**
          * map v = simEigen.Matrix:cross(map v2)
          */
-        Matrix:cross(v2: object): object;
+        "Matrix:cross"(v2: object): object;
 
         /**
          * float[] a = simEigen.Matrix:data()
          */
-        Matrix:data(): number[];
+        "Matrix:data"(): number[];
 
         /**
          * map m = simEigen.Matrix:deg()
          */
-        Matrix:deg(): object;
+        "Matrix:deg"(): object;
 
         /**
          * float d = simEigen.Matrix:det()
          */
-        Matrix:det(): number;
+        "Matrix:det"(): number;
 
         /**
          * map m = simEigen.Matrix:div(map m2)
          */
-        Matrix:div(m2: object): object;
+        "Matrix:div"(m2: object): object;
 
         /**
          * float the = simEigen.Matrix:dot(map v2)
          */
-        Matrix:dot(v2: object): number;
+        "Matrix:dot"(v2: object): number;
 
         /**
          * map m = simEigen.Matrix:exp()
          */
-        Matrix:exp(): object;
+        "Matrix:exp"(): object;
 
         /**
          * map m = simEigen.Matrix:eye(int n)
          */
-        Matrix:eye(n: number): object;
+        "Matrix:eye"(n: number): object;
 
         /**
          * map m = simEigen.Matrix:floor()
          */
-        Matrix:floor(): object;
+        "Matrix:floor"(): object;
 
         /**
          * map m = simEigen.Matrix:horzcat(map m2)
          */
-        Matrix:horzcat(m2: object): object;
+        "Matrix:horzcat"(m2: object): object;
 
         /**
          * map self = simEigen.Matrix:iabs()
          */
-        Matrix:iabs(): object;
+        "Matrix:iabs"(): object;
 
         /**
          * map self = simEigen.Matrix:iacos()
          */
-        Matrix:iacos(): object;
+        "Matrix:iacos"(): object;
 
         /**
          * map self = simEigen.Matrix:iadd(map m)
          */
-        Matrix:iadd(m: object): object;
+        "Matrix:iadd"(m: object): object;
 
         /**
          * map self = simEigen.Matrix:iasin()
          */
-        Matrix:iasin(): object;
+        "Matrix:iasin"(): object;
 
         /**
          * map self = simEigen.Matrix:iatan()
          */
-        Matrix:iatan(): object;
+        "Matrix:iatan"(): object;
 
         /**
          * map self = simEigen.Matrix:iceil()
          */
-        Matrix:iceil(): object;
+        "Matrix:iceil"(): object;
 
         /**
          * map self = simEigen.Matrix:icos()
          */
-        Matrix:icos(): object;
+        "Matrix:icos"(): object;
 
         /**
          * map self = simEigen.Matrix:ideg()
          */
-        Matrix:ideg(): object;
+        "Matrix:ideg"(): object;
 
         /**
          * map self = simEigen.Matrix:idiv(map m)
          */
-        Matrix:idiv(m: object): object;
+        "Matrix:idiv"(m: object): object;
 
         /**
          * map self = simEigen.Matrix:iexp()
          */
-        Matrix:iexp(): object;
+        "Matrix:iexp"(): object;
 
         /**
          * map self = simEigen.Matrix:ifloor()
          */
-        Matrix:ifloor(): object;
+        "Matrix:ifloor"(): object;
 
         /**
          * map self = simEigen.Matrix:iintdiv(map m)
          */
-        Matrix:iintdiv(m: object): object;
+        "Matrix:iintdiv"(m: object): object;
 
         /**
          * map self = simEigen.Matrix:ilog()
          */
-        Matrix:ilog(): object;
+        "Matrix:ilog"(): object;
 
         /**
          * map self = simEigen.Matrix:ilog10()
          */
-        Matrix:ilog10(): object;
+        "Matrix:ilog10"(): object;
 
         /**
          * map self = simEigen.Matrix:ilog2()
          */
-        Matrix:ilog2(): object;
+        "Matrix:ilog2"(): object;
 
         /**
          * map self = simEigen.Matrix:imax(map m)
          */
-        Matrix:imax(m: object): object;
+        "Matrix:imax"(m: object): object;
 
         /**
          * map self = simEigen.Matrix:imin(map m)
          */
-        Matrix:imin(m: object): object;
+        "Matrix:imin"(m: object): object;
 
         /**
          * map self = simEigen.Matrix:imod(map m)
          */
-        Matrix:imod(m: object): object;
+        "Matrix:imod"(m: object): object;
 
         /**
          * map self = simEigen.Matrix:imul(map m)
          */
-        Matrix:imul(m: object): object;
+        "Matrix:imul"(m: object): object;
 
         /**
          * map m = simEigen.Matrix:intdiv(map m2)
          */
-        Matrix:intdiv(m2: object): object;
+        "Matrix:intdiv"(m2: object): object;
 
         /**
          * map m = simEigen.Matrix:inversetransform()
          */
-        Matrix:inversetransform(): object;
+        "Matrix:inversetransform"(): object;
 
         /**
          * map self = simEigen.Matrix:irad()
          */
-        Matrix:irad(): object;
+        "Matrix:irad"(): object;
 
         /**
          * map self = simEigen.Matrix:isin()
          */
-        Matrix:isin(): object;
+        "Matrix:isin"(): object;
 
         /**
          * bool true = simEigen.Matrix:ismatrix(any m)
          */
-        Matrix:ismatrix(m: any): boolean;
+        "Matrix:ismatrix"(m: any): boolean;
 
         /**
          * bool true = simEigen.Matrix:isorthogonal(float tol=1e-6)
          */
-        Matrix:isorthogonal(tol?: number): boolean;
+        "Matrix:isorthogonal"(tol?: number): boolean;
 
         /**
          * map self = simEigen.Matrix:isqrt()
          */
-        Matrix:isqrt(): object;
+        "Matrix:isqrt"(): object;
 
         /**
          * map self = simEigen.Matrix:isub(map m)
          */
-        Matrix:isub(m: object): object;
+        "Matrix:isub"(m: object): object;
 
         /**
          * bool true = simEigen.Matrix:isvector(any m)
          */
-        Matrix:isvector(m: any): boolean;
+        "Matrix:isvector"(m: any): boolean;
 
         /**
          * map self = simEigen.Matrix:itan()
          */
-        Matrix:itan(): object;
+        "Matrix:itan"(): object;
 
         /**
          * float value = simEigen.Matrix:item(int i, int j)
          */
-        Matrix:item(i: number, j: number): number;
+        "Matrix:item"(i: number, j: number): number;
 
         /**
          * map self = simEigen.Matrix:itimes(map m)
          */
-        Matrix:itimes(m: object): object;
+        "Matrix:itimes"(m: object): object;
 
         /**
          * map m = simEigen.Matrix:kron(map m2)
          */
-        Matrix:kron(m2: object): object;
+        "Matrix:kron"(m2: object): object;
 
         /**
          * map m = simEigen.Matrix:linspace(float low, float high, int count)
          */
-        Matrix:linspace(low: number, high: number, count: number): object;
+        "Matrix:linspace"(low: number, high: number, count: number): object;
 
         /**
          * map m = simEigen.Matrix:log()
          */
-        Matrix:log(): object;
+        "Matrix:log"(): object;
 
         /**
          * map m = simEigen.Matrix:log10()
          */
-        Matrix:log10(): object;
+        "Matrix:log10"(): object;
 
         /**
          * map m = simEigen.Matrix:log2()
          */
-        Matrix:log2(): object;
+        "Matrix:log2"(): object;
 
         /**
          * map m = simEigen.Matrix:max(map m2)
          */
-        Matrix:max(m2: object): object;
+        "Matrix:max"(m2: object): object;
 
         /**
          * float result = simEigen.Matrix:maxcoeff()
          */
-        Matrix:maxcoeff(): number;
+        "Matrix:maxcoeff"(): number;
 
         /**
          * map m = simEigen.Matrix:min(map m2)
          */
-        Matrix:min(m2: object): object;
+        "Matrix:min"(m2: object): object;
 
         /**
          * map m = simEigen.Matrix:mod(map m2)
          */
-        Matrix:mod(m2: object): object;
+        "Matrix:mod"(m2: object): object;
 
         /**
          * map m = simEigen.Matrix:mul()
          */
-        Matrix:mul(): object;
+        "Matrix:mul"(): object;
 
         /**
          * float result = simEigen.Matrix:norm()
          */
-        Matrix:norm(): number;
+        "Matrix:norm"(): number;
 
         /**
          * map self = simEigen.Matrix:normalize()
          */
-        Matrix:normalize(): object;
+        "Matrix:normalize"(): object;
 
         /**
          * map m = simEigen.Matrix:normalized()
          */
-        Matrix:normalized(): object;
+        "Matrix:normalized"(): object;
 
         /**
          * map m, map the = simEigen.Matrix:pinv(map b, float damping)
          */
-        Matrix:pinv(b: object, damping: number): [object, object];
+        "Matrix:pinv"(b: object, damping: number): [object, object];
 
         /**
          * simEigen.Matrix:print()
          */
-        Matrix:print(): void;
+        "Matrix:print"(): void;
 
         /**
          * float damping = simEigen.Matrix:prod()
          */
-        Matrix:prod(): number;
+        "Matrix:prod"(): number;
 
         /**
          * map m = simEigen.Matrix:rad()
          */
-        Matrix:rad(): object;
+        "Matrix:rad"(): object;
 
         /**
          * map m = simEigen.Matrix:reshaped(int rows, int cols)
          */
-        Matrix:reshaped(rows: number, cols: number): object;
+        "Matrix:reshaped"(rows: number, cols: number): object;
 
         /**
          * map m = simEigen.Matrix:row(int i)
          */
-        Matrix:row(i: number): object;
+        "Matrix:row"(i: number): object;
 
         /**
          * float[] a = simEigen.Matrix:rowdata(int i)
          */
-        Matrix:rowdata(i: number): number[];
+        "Matrix:rowdata"(i: number): number[];
 
         /**
          * int number = simEigen.Matrix:rows()
          */
-        Matrix:rows(): number;
+        "Matrix:rows"(): number;
 
         /**
          * map self = simEigen.Matrix:setcol(int j, map col)
          */
-        Matrix:setcol(j: number, col: object): object;
+        "Matrix:setcol"(j: number, col: object): object;
 
         /**
          * map self = simEigen.Matrix:setcoldata(int j, float[] data)
          */
-        Matrix:setcoldata(j: number, data: number[]): object;
+        "Matrix:setcoldata"(j: number, data: number[]): object;
 
         /**
          * map self = simEigen.Matrix:setdata(float[] data)
          */
-        Matrix:setdata(data: number[]): object;
+        "Matrix:setdata"(data: number[]): object;
 
         /**
          * map self = simEigen.Matrix:setitem(int i, int j, float[] data)
          */
-        Matrix:setitem(i: number, j: number, data: number[]): object;
+        "Matrix:setitem"(i: number, j: number, data: number[]): object;
 
         /**
          * map m = simEigen.Matrix:setrow(int i, map row)
          */
-        Matrix:setrow(i: number, row: object): object;
+        "Matrix:setrow"(i: number, row: object): object;
 
         /**
          * map self = simEigen.Matrix:setrowdata(int i, float[] data)
          */
-        Matrix:setrowdata(i: number, data: number[]): object;
+        "Matrix:setrowdata"(i: number, data: number[]): object;
 
         /**
          * map m = simEigen.Matrix:sin()
          */
-        Matrix:sin(): object;
+        "Matrix:sin"(): object;
 
         /**
          * map m = simEigen.Matrix:sqrt()
          */
-        Matrix:sqrt(): object;
+        "Matrix:sqrt"(): object;
 
         /**
          * map m = simEigen.Matrix:sub(map m2)
          */
-        Matrix:sub(m2: object): object;
+        "Matrix:sub"(m2: object): object;
 
         /**
          * map s, map u, map v, map x = simEigen.Matrix:svd(bool computeThinU=false, bool computeThinV=false, map b=nil)
          */
-        Matrix:svd(computeThinU?: boolean, computeThinV?: boolean, b?: object): [object, object, object, object];
+        "Matrix:svd"(computeThinU?: boolean, computeThinV?: boolean, b?: object): [object, object, object, object];
 
         /**
          * map m = simEigen.Matrix:tan()
          */
-        Matrix:tan(): object;
+        "Matrix:tan"(): object;
 
         /**
          * map m = simEigen.Matrix:times(map m2)
          */
-        Matrix:times(m2: object): object;
+        "Matrix:times"(m2: object): object;
 
         /**
          * float trace = simEigen.Matrix:trace()
          */
-        Matrix:trace(): number;
+        "Matrix:trace"(): number;
 
         /**
          * map m = simEigen.Matrix:transform(map v)
          */
-        Matrix:transform(v: object): object;
+        "Matrix:transform"(v: object): object;
 
         /**
          * map self = simEigen.Matrix:transpose()
          */
-        Matrix:transpose(): object;
+        "Matrix:transpose"(): object;
 
         /**
          * map m = simEigen.Matrix:transposed()
          */
-        Matrix:transposed(): object;
+        "Matrix:transposed"(): object;
 
         /**
          * map m = simEigen.Matrix:vertcat(map m2)
          */
-        Matrix:vertcat(m2: object): object;
+        "Matrix:vertcat"(m2: object): object;
 
         /**
          * map p = simEigen.Pose(map t, map q)
@@ -4493,32 +4493,32 @@ declare namespace CoppeliaSim {
         /**
          * float[] data = simEigen.Pose:data()
          */
-        Pose:data(): number[];
+        "Pose:data"(): number[];
 
         /**
          * map p = simEigen.Pose:fromtransform(map m)
          */
-        Pose:fromtransform(m: object): object;
+        "Pose:fromtransform"(m: object): object;
 
         /**
          * map result = simEigen.Pose:inv()
          */
-        Pose:inv(): object;
+        "Pose:inv"(): object;
 
         /**
          * bool true = simEigen.Pose:ispose(any m)
          */
-        Pose:ispose(m: any): boolean;
+        "Pose:ispose"(m: any): boolean;
 
         /**
          * map p = simEigen.Pose:mul(map o)
          */
-        Pose:mul(o: object): object;
+        "Pose:mul"(o: object): object;
 
         /**
          * map m = simEigen.Pose:totransform()
          */
-        Pose:totransform(): object;
+        "Pose:totransform"(): object;
 
         /**
          * map q = simEigen.Quaternion(float[] data={})
@@ -4528,62 +4528,62 @@ declare namespace CoppeliaSim {
         /**
          * float[] data = simEigen.Quaternion:data()
          */
-        Quaternion:data(): number[];
+        "Quaternion:data"(): number[];
 
         /**
          * map q = simEigen.Quaternion:fromaxisangle(map axis, float angle)
          */
-        Quaternion:fromaxisangle(axis: object, angle: number): object;
+        "Quaternion:fromaxisangle"(axis: object, angle: number): object;
 
         /**
          * map q = simEigen.Quaternion:fromeuler(map euler)
          */
-        Quaternion:fromeuler(euler: object): object;
+        "Quaternion:fromeuler"(euler: object): object;
 
         /**
          * map q = simEigen.Quaternion:fromrotation(map r)
          */
-        Quaternion:fromrotation(r: object): object;
+        "Quaternion:fromrotation"(r: object): object;
 
         /**
          * map self = simEigen.Quaternion:imul(map o)
          */
-        Quaternion:imul(o: object): object;
+        "Quaternion:imul"(o: object): object;
 
         /**
          * map result = simEigen.Quaternion:inv()
          */
-        Quaternion:inv(): object;
+        "Quaternion:inv"(): object;
 
         /**
          * bool true = simEigen.Quaternion:isquaternion(any m)
          */
-        Quaternion:isquaternion(m: any): boolean;
+        "Quaternion:isquaternion"(m: any): boolean;
 
         /**
          * map q = simEigen.Quaternion:mul(map o)
          */
-        Quaternion:mul(o: object): object;
+        "Quaternion:mul"(o: object): object;
 
         /**
          * map q = simEigen.Quaternion:slerp(float t, map q2)
          */
-        Quaternion:slerp(t: number, q2: object): object;
+        "Quaternion:slerp"(t: number, q2: object): object;
 
         /**
          * map axis, float angle = simEigen.Quaternion:toaxisangle()
          */
-        Quaternion:toaxisangle(): [object, number];
+        "Quaternion:toaxisangle"(): [object, number];
 
         /**
          * map euler = simEigen.Quaternion:toeuler()
          */
-        Quaternion:toeuler(): object;
+        "Quaternion:toeuler"(): object;
 
         /**
          * map q = simEigen.Quaternion:torotation()
          */
-        Quaternion:torotation(): object;
+        "Quaternion:torotation"(): object;
 
         /**
          * map v = simEigen.Vector(int size, float[] data)

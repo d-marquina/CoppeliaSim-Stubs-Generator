@@ -38,22 +38,22 @@ def ts_type(c_type: str) -> str:
         'double': 'number',
         'number': 'number',
         'bool': 'boolean',
-        'buffer': 'Uint8Array', # Assuming buffer maps to a byte array in TS
-        'table': 'object', # Generic object for Lua tables
-        'map': 'object',   # Generic object for Lua maps
+        'buffer': 'Uint8Array',  # Assuming buffer maps to a byte array in TS
+        'table': 'object',  # Generic object for Lua tables
+        'map': 'object',  # Generic object for Lua maps
         'void': 'void',
     }
     c_type = c_type.lower()
-    
+
     # Handle array types
     if '[]' in c_type:
         base_type = c_type.replace('[]', '').strip()
         return f"{TYPE_MAP.get(base_type, 'any')}[]"
-    if '*' in c_type and c_type != 'char*': # Pointer, often implies array or generic
+    if '*' in c_type and c_type != 'char*':  # Pointer, often implies array or generic
         base_type = c_type.replace('*', '').strip()
         return f"{TYPE_MAP.get(base_type, 'any')}[]"
 
-    return TYPE_MAP.get(c_type, 'any') # Default to 'any' if no specific mapping
+    return TYPE_MAP.get(c_type, 'any')  # Default to 'any' if no specific mapping
 
 
 def generate_typescript_definition_file(calltips_path: Path, constants_path: Path, output_d_ts: Path):
@@ -69,7 +69,8 @@ def generate_typescript_definition_file(calltips_path: Path, constants_path: Pat
         with open(constants_path, 'r', encoding='utf-8') as f:
             constants_data = json.load(f)
     except FileNotFoundError:
-        print(f"Warning: Constants file not found at '{constants_path}'. The definition file will be generated without constants.")
+        print(
+            f"Warning: Constants file not found at '{constants_path}'. The definition file will be generated without constants.")
         constants_data = {}
 
     # Group functions by module (sim, simUI, etc.)
@@ -101,15 +102,16 @@ def generate_typescript_definition_file(calltips_path: Path, constants_path: Pat
                 f.write("        // --- Constants ---\n")
                 sorted_constants = sorted(constants_data[module_name].items())
                 for const_name, const_value in sorted_constants:
-                    const_type = 'string' if isinstance(const_value, str) else 'number' if isinstance(const_value, (int, float)) else 'any'
+                    const_type = 'string' if isinstance(const_value, str) else 'number' if isinstance(const_value, (int,
+                                                                                                                    float)) else 'any'
                     f.write(f"        readonly {const_name}: {const_type};\n")
                 f.write("\n")
 
             if funcs:
                 f.write("        // --- Functions ---\n")
-            
+
             sorted_funcs = sorted(list(funcs))
-            
+
             if not sorted_funcs:
                 f.write("        // No functions in this module\n")
                 f.write("    }\n\n")
@@ -128,14 +130,14 @@ def generate_typescript_definition_file(calltips_path: Path, constants_path: Pat
                         if not param or param == '...':
                             ts_params.append('...args: any[]')
                             continue
-                        
+
                         parts = param.strip().split(' ')
                         p_type = ts_type(parts[0])
                         p_name = parts[1].split('=')[0].replace('[]', '') if len(parts) > 1 else f'arg{i}'
                         p_name = re.sub(r'[^a-zA-Z0-9_]', '', p_name)
-                        
+
                         optional = '=' in param
-                        
+
                         ts_params.append(f"{p_name}{'?' if optional else ''}: {p_type}")
 
                     # Build the return type for TypeScript
@@ -149,7 +151,10 @@ def generate_typescript_definition_file(calltips_path: Path, constants_path: Pat
                     f.write(f"        /**\n")
                     f.write(f"         * {full_signature}\n")
                     f.write(f"         */\n")
-                    f.write(f"        {short_func_name}({', '.join(ts_params)}): {ts_return_type};\n\n")
+                    if ":" in short_func_name:
+                        f.write(f"        \"{short_func_name}\"({', '.join(ts_params)}): {ts_return_type};\n\n")
+                    else:
+                        f.write(f"        {short_func_name}({', '.join(ts_params)}): {ts_return_type};\n\n")
 
                 except Exception as e:
                     print(f"Could not process signature for '{func_name}': {full_signature} ({e})")
@@ -157,7 +162,7 @@ def generate_typescript_definition_file(calltips_path: Path, constants_path: Pat
                     f.write(f"        // Original signature: {full_signature}\n\n")
 
             f.write("    }\n\n")
-        
+
         f.write("    // --- Global API instances ---\n")
         for module_name in sorted(modules.keys()):
             f.write(f"    export const {module_name}: {module_name};\n")
@@ -168,7 +173,8 @@ def generate_typescript_definition_file(calltips_path: Path, constants_path: Pat
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Generates a .d.ts TypeScript definition file from CoppeliaSim calltips and constants JSONs.')
+    parser = argparse.ArgumentParser(
+        description='Generates a .d.ts TypeScript definition file from CoppeliaSim calltips and constants JSONs.')
     parser.add_argument('calltips_json', type=Path, help='Path to the input calltips.json file.')
     parser.add_argument('constants_json', type=Path, help='Path to the input constants.json file.')
     parser.add_argument('output_d_ts', type=Path, help='Path to the output .d.ts file.')
