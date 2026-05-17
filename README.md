@@ -90,3 +90,9 @@ sim.startSimulation()
 # ...
 sim.stopSimulation()
 ```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). 
+
+It includes code derived from the CoppeliaSim ZMQ Remote API, which is copyrighted by Coppelia Robotics AG and licensed under the BSD 2.0 License. See the `LICENSE` file for full details.
